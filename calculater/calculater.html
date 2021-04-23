@@ -1,0 +1,9 @@
+<template>
+    <lightning-card>
+        <h3>: SIMPLE CALCULATOR : </h3>
+        <lightning-input label="Enter First Number" value={num1} onchange={change1}></lightning-input>
+        <lightning-input label="Enter Second Number" value={num2} onchange={change2}></lightning-input>
+        <lightning-button label="Calculate" title="Click to calculate" onclick={addnum} ></lightning-button>
+        <h4>Output : </h4> <lightning-formatted-number value={sum} ></lightning-formatted-number>
+    </lightning-card>
+</template>
