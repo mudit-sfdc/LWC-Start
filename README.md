@@ -1,7 +1,7 @@
 # LWC-Start
 This is just a start I am practicing the lightning web components and try to push every single and basic component here.
 
-Thanks and try to make good component with Events, Lightning Message channel and many more.
+Will try to make good components with Events, Lightning Message channel and many more.
 
 lets laern and push !!!
 
