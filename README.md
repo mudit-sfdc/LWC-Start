@@ -3,7 +3,7 @@ This is just a start I am practicing the lightning web components and try to pus
 
 Will try to make good components with Events, Lightning Message channel and many more.
 
-lets laern and push !!!
+lets learn and push !!!
 
 Yeah checkout my linkedin account - https://www.linkedin.com/in/mudit-chaturvedi-003/
 
