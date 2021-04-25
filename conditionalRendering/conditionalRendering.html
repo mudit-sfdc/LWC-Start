@@ -1,0 +1,13 @@
+<template>
+<!--Conditional rendering -->
+    <lightning-card>
+        <lightning-input type="checkbox" label="Click me to Show below details" onchange={checkHandle}></lightning-input>
+        <!--Here you have one more attribute CHECKED so use event.detail.checked to get the value of checkbox.-->
+
+        <template if:true={isvisible} >
+            <div>
+                I am visible uncheck the check-box to hide me.
+            </div>
+        </template>
+    </lightning-card>
+</template>
