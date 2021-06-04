@@ -1,0 +1,46 @@
+<template>
+    <lightning-card title="Simple Calculator">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" class="slds-p-left_medium">
+                <lightning-input label="Enter Number-1 : " name="num1" onchange={selectnumber}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" class="slds-p-left_medium">
+                <lightning-input label="Enter Number-2 : " name="num2" onchange={selectnumber}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" class="slds-p-left_medium slds-p-top_medium slds-align_absolute_center">
+                <lightning-button-group>
+                    <lightning-button label="Addition" name="add" onclick={calculate}></lightning-button>
+                    <lightning-button label="Multiply" name="mul" onclick={calculate}></lightning-button>
+                    <lightning-button label="Substract" name="subs" onclick={calculate}></lightning-button>
+                    <lightning-button label="Divide" name="div" onclick={calculate}></lightning-button>
+                </lightning-button-group>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" class=" slds-p-top_medium">
+                <template if:true={showResult}>
+                    <lightning-card title="Result" >
+                        <span class="slds-text-color_success slds-p-left_medium">Result :: </span>{result}
+                        <!--<lightning-formatted-text value={result} />-->     
+                    </lightning-card>
+                </template>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" class="slds-p-top_medium">
+                <lightning-card title="History">
+                    <template if:true={isHistory}>
+                        <template iterator:it={historylist}>
+                            <div key={it.value} class="slds-p-left_medium ">
+                                <template if:true={it.first} class="slds-border_top"></template>
+                                {it.value}
+                                <template if:true={it.last} class="slds-border_bottom"></template>
+                            </div>
+                        </template>
+                    </template>
+                    <template if:false={isHistory} >
+                        <div class="slds-p-left_medium">
+                            No History found...
+                        </div>
+                    </template>
+                </lightning-card>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

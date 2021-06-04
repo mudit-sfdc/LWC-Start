@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="for Loop">
+        <template for:each={members} for:item="member">
+            <h3 key={member}>{member}</h3>
+        </template>
+    </lightning-card>
+    <lightning-card title="iterator Loop">
+        <template iterator:it={members}>
+            <template if:true={it.first}>
+                First Item
+            </template>
+            <h2 key={it.value}>{it.value}</h2>
+            <template if:true={it.last}>
+                Last Item
+            </template>
+        </template>
+    </lightning-card>
+</template>

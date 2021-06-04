@@ -1,0 +1,31 @@
+.box{
+    border-radius: 10px;
+    background-color: #dfd51b;
+    padding: 15px;
+    width: 148px;
+    height: 148px;
+    display: inline-block;
+    margin: 3px;
+    font-size: 15px;
+    text-align: center; 
+}
+.completed{
+    background-color: #aafac3;
+}
+.todo{
+    background-color: #dfd51b;
+}
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 1000px;
+}
+.todoSection{
+    width:50%;
+    float:left;
+}
+
+.dropSection{
+    width:50%;
+    float:left;
+}

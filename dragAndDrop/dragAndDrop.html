@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="Drag and Drop">
+        <lightning-layout>
+            <!--<div class="slds-p-around_large">-->
+            <div>
+                <div class="flex-container" ondragover={allowDrop} ondrop={dropToDo}>
+                    <div id="ToDo2" class="box" draggable="true" ondragstart={drag}>
+                        ToDo--2
+                    </div>
+                    <div id="ToDo3" class="box" draggable="true" ondragstart={drag}>
+                        ToDo--3
+                    </div>
+                    <div id="ToDo4" class="box" draggable="true" ondragstart={drag}>
+                        ToDo--4
+                    </div>
+                    <div>
+                        &nbsp;
+                    </div>
+                </div>
+                <hr></hr>
+                <div class="flex-container" ondragover={allowDrop} ondrop={dropComplete}>
+                    <div id="ToDo1" class="box" draggable="true" ondragstart={drag}>
+                        ToDo--1
+                    </div>
+                    <div>
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+            <!--</div> -->
+        </lightning-layout>
+    </lightning-card>
+</template>
