@@ -1,0 +1,64 @@
+<template>
+    <lightning-card title="Create Contact using Apex Code">
+        <lightning-layout>
+            <lightning-layout-item flexibility="auto" padding="around-small">
+                <div class="slds-box slds-p-around_medium">
+                    <div class="slds-text-align_center ">
+                        <b class="slds-p-around_small">Create Contact</b><br/>
+                        <div class="slds-border_top slds-border_bottom slds-p-around_large">
+                            <div class="slds-grid slds-p-bottom_small">
+                                <div class="slds-col"> 
+                                    Name : 
+                                </div>
+                                <div class="slds-col">
+                                    <lightning-input label="Name" variant="label-hidden" value={rec.LastName} onchange={handleNameChange} ></lightning-input>
+                                </div>
+                            </div>
+                            <div class="slds-grid slds-p-bottom_small">
+                                <div class="slds-col"> 
+                                    Email : 
+                                </div>
+                                <div class="slds-col">
+                                    <lightning-input label="Email" variant="label-hidden" value={rec.Email} onchange={handleEmailChange} ></lightning-input>
+                                </div>
+                            </div>
+                            <div class="slds-grid">
+                                <div class="slds-col"> 
+                                    Phone : 
+                                </div>
+                                <div class="slds-col">
+                                    <lightning-input type="Phone" variant="label-hidden" label="Phone" value={rec.Phone} onchange={handlePhoneChange} ></lightning-input><br>
+                                </div>
+                            </div>
+                            <lightning-button label="Save" variant="Brand" onclick={saveContact} ></lightning-button><br/>
+                        </div>
+                    </div>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item flexibility="auto" padding="around-small">
+                <div class="slds-box slds-p-around_medium">
+                    <div class="slds-text-align_center slds-p-bottom_small"><b>Display 5 Contact based on Created date</b></div>
+                    <div class="slds-grid searchAlign"> 
+                        <div class="slds-col">
+                            <lightning-input label='Search' variant='label-hidden' onchange={handleSearch} placeholder='Search here...'></lightning-input>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-button label='Search' variant='Brand' onclick={searchKey} ></lightning-button>
+                        </div>
+                    </div>
+                    
+                    <template for:each={lstContact} for:item="con">
+                        <div class="slds-p-around_small slds-box slds-m-around_small slds-grid" key={con.Id}>
+                            <div class="slds-col">
+                                {con.Name}
+                            </div>
+                            <div class="slds-col">
+                                {con.Email}
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>
